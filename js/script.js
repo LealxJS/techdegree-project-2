@@ -88,8 +88,6 @@ function showPage(list, page) {
    }
 }
 
-
-
 /*
 Create the `addPagination` function
 This function will create and insert/append the elements needed for the pagination buttons
@@ -112,6 +110,7 @@ function addPagination(list) {
 
 }
 
+// paginationListener is for the click of the buttons to function in search mode and in browsing using a click of a button.
 function paginationListener(value) {
    paginationList.addEventListener('click', (e) => {
       const activeBTN = document.querySelector('button.active');
@@ -131,6 +130,7 @@ function paginationListener(value) {
 // Call functions
 createSearchBar(header);
 
+// handles the even in an input field in the header
 header.addEventListener('keyup', () => {
    const searchBar = document.querySelector('input#search');
 
