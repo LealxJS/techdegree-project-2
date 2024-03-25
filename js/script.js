@@ -48,7 +48,7 @@ This function will create and insert/append the elements needed to display a "pa
 */
 
 function showPage(list, page) {
-
+   ul.innerHTML = '';
    const firstItem = (page * itemsPerPage) - itemsPerPage;
    const lastItem = (page * itemsPerPage);
    
@@ -94,7 +94,7 @@ This function will create and insert/append the elements needed for the paginati
 */
 
 function addPagination(list) {
-
+   paginationList.innerHTML = '';
    const numberOfBtn = Math.ceil(list.length/itemsPerPage);
    
 
@@ -130,7 +130,7 @@ function paginationListener(value) {
 // Call functions
 createSearchBar(header);
 
-// handles the even in an input field in the header
+// handles the event in an input field in the header
 header.addEventListener('keyup', () => {
    const searchBar = document.querySelector('input#search');
 
